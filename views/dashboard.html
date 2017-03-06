@@ -1,0 +1,86 @@
+<nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand">
+        	<div id="main">
+			  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+			</div>
+        </a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="pull-left"><img src="" /></a></li>
+        <li><a></a></li>
+        <li class="dropdown">
+	      <a class="dropdown-toggle" data-toggle="dropdown" style="font-size: 20px;">Donald Trump<b class="caret"></b></a>
+	      <ul class="dropdown-menu">
+	        <li><a ng-click="logout()">Logout</a></li>
+	      </ul>
+	    </li>
+      </ul>
+    </div>
+</nav>
+<div id="mySidenav" class="sidenav" style="background: #000033;">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <h1><a class="fa fa-paw"> Uni Store</a></h1>
+  <br>
+  <br>
+  <a class="fa fa-home">  Home</a><br>
+  <a class="fa fa-trophy">  Offers</a>
+</div>
+<div>
+	<div class="row container">
+	    <div class="col-sm-4 text-center">Total Shopping <br/><h3><input type="number" ng-pattern="onlyNumbers" ng-model="total" ng-change="otherCalc()"></h3>In last Week</div>
+	    <div class="col-sm-4 text-center">Cash on Delivery <br/><h3><input type="number" ng-pattern="onlyNumbers" ng-change="otherCalc()" ng-model="COD" ></h3>58% of total shopping</div>
+	    <div class="col-sm-4 text-center">Other <br/><h3>{{other}}</h3>42% of total shopping</div>
+	</div>
+	<div class="container">
+		<div class="row">
+		    <div class="col-md-6">
+		        <div class="panel panel-default" style="height:500px;width:420px;">
+		           <div>
+						<h1 style="padding: 5px;">Summary</h1>
+					</div><hr>
+					<div class="panel-body-heading bg-danger" >
+					    <h3 class="pb-title" style="padding: 5px;">Top 5</h3>
+					</div>
+					<div id="chart-donut" class="chart"><svg height="290" version="1.1" width="360" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.40625px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path fill="none" stroke="#3498db" d="M218,243.33333333333331A93.33333333333333,93.33333333333333,0,0,0,311.3333330454699,150.00733038285082" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#3498db" stroke="#ffffff" d="M218,246.33333333333331A96.33333333333333,96.33333333333333,0,0,0,314.3333330362171,150.0075660022996L352.99999958362605,150.01060287519496A135,135,0,0,1,218,285Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#e74c3c" d="M311.3333330454699,150.00733038285082A93.33333333333333,93.33333333333333,0,0,0,144.3054960170495,92.7266973728771" stroke-width="2" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path><path fill="#e74c3c" stroke="#ffffff" d="M314.3333330362171,150.0075660022996A96.33333333333333,96.33333333333333,0,0,0,141.9367441033118,90.88576978843386L107.45824402557427,64.09004605931564A140,140,0,0,1,357.99999956820477,150.01099557427625Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#2ecc71" d="M144.3054960170495,92.7266973728771A93.33333333333333,93.33333333333333,0,0,0,160.72090959672028,223.69000552099322" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#2ecc71" stroke="#ffffff" d="M141.9367441033118,90.88576978843386A96.33333333333333,96.33333333333333,0,0,0,158.87979597661484,226.05861284131086L135.1498870952561,256.5873294142938A135,135,0,0,1,111.40616388180376,67.15825870005436Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#f39c12" d="M160.72090959672028,223.69000552099322A93.33333333333333,93.33333333333333,0,0,0,217.97067846904892,243.33332872751785" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#f39c12" stroke="#ffffff" d="M158.87979597661484,226.05861284131086A96.33333333333333,96.33333333333333,0,0,0,217.96973599126835,246.3333285794738L217.95758849987433,284.9999933380169A135,135,0,0,1,135.1498870952561,256.5873294142938Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="218" y="140" text-anchor="middle" font="10px "Arial"" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: 800; font-size: 15px; line-height: normal; font-family: Arial;" font-size="15px" font-weight="800" transform="matrix(2.7809,0,0,2.7809,-388.2322,-264.2661)" stroke-width="0.3595982142857143"><tspan dy="5.203125" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></tspan></text><text x="218" y="160" text-anchor="middle" font="10px "Arial"" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: normal; font-family: Arial;" font-size="14px" transform="matrix(1.9871,0,0,1.9871,-215.1958,-150.2145)" stroke-width="0.5032366071428571"><tspan dy="4.859375" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></tspan></text></svg>
+				    </div>
+		    	</div>
+		    </div>		
+		    <div class="col-md-6">
+		        <div class="panel panel-default" style="height:800px;width:450px;">
+		                <div class="panel-body">
+		                	<h2 class="media-heading">{{dish.name}}
+		                         <span class="label label-danger">{{dish.label}}</span>
+		                         <span class="badge">{{dish.price | currency}}</span></h2>
+	                        <p>{{dish.description}}</p>
+		                   <blockquote ng-repeat="comment in dish.comments">
+		                        <p>{{comment.rating}} Stars</p>
+		                        <p>{{comment.comment}}</p>
+		                        <footer>{{comment.author}}, {{comment.date | date}}</footer>
+	                    	</blockquote>	
+		                </div>
+		           </div>
+		    </div>
+		</div>
+	</div>	
+</div>
+
+<script type="text/javascript">
+	$('ul.nav li.dropdown').hover(function() {
+	  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+	}, function() {
+	  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+	});
+	
+	function openNav() {
+	    document.getElementById("mySidenav").style.width = "250px";
+	    document.getElementById("main").style.marginLeft = "250px";
+	}
+
+	function closeNav() {
+	    document.getElementById("mySidenav").style.width = "0";
+	    document.getElementById("main").style.marginLeft= "0";
+	}
+</script>
